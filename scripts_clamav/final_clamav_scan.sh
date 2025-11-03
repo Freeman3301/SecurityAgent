@@ -1,0 +1,13 @@
+clamscan -r / \
+    --infected \
+    --verbose \
+    --stdout \
+    --max-filesize=100M \
+    --max-scansize=200M \
+    --exclude-dir="^/sys" \
+    --exclude-dir="^/proc" \
+    --exclude-dir="^/dev" \
+    --exclude-dir="^/run" \
+    --detect-pua \
+    --algorithmic-detection \
+    --heuristic-alerts 2>&1 | grep "FOUND" > clamav.log
