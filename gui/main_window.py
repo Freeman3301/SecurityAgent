@@ -19,7 +19,7 @@ class MainWindow:
     def __init__(self, root, logic):
         self.root = root
         self.logic = logic
-        self.root.title("System Security Agent v1.0")
+        self.root.title("System Security Agent v1.0 - Suricata & ClamAV")
         self.root.geometry("1000x800")
         
         # Конфигурация
@@ -31,6 +31,9 @@ class MainWindow:
         
         # Текущая выбранная система
         self.current_system = tk.StringVar(value='suricata')
+        
+        # Доступные системы
+        self.available_systems = ['suricata', 'clamav']
         
         self.setup_ui()
     
