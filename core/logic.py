@@ -38,7 +38,7 @@ class SecuritySystemLogic:
         elif system == 'clamav':
             return self.run_clamav_full_installation()
         else:
-            return self.run_installation_script(system)
+            return f"❌ Система {system} не поддерживается"
     
     def run_suricata_full_installation(self):
         """Полная установка Suricata через три скрипта"""
@@ -110,31 +110,6 @@ class SecuritySystemLogic:
                 return f"❌ Исключение в {description}: {str(e)}"
         
         return "✅ ClamAV полностью установлен и настроен"
-    
-    def run_installation_script(self, system):
-        """Установка других систем"""
-        scripts = {
-            'fail2ban': 'sudo pacman -S --noconfirm fail2ban',
-            'auditd': 'sudo pacman -S --noconfirm audit',
-        }
-        
-        if system in scripts:
-            try:
-                result = subprocess.run(
-                    scripts[system],
-                    shell=True,
-                    capture_output=True,
-                    text=True,
-                    timeout=180
-                )
-                if result.returncode == 0:
-                    return "✅ Установка завершена успешно"
-                else:
-                    return f"❌ Ошибка: {result.stderr}"
-            except Exception as e:
-                return f"❌ Исключение: {str(e)}"
-        
-        return "❌ Система не найдена"
     
     # === ОТДЕЛЬНЫЕ ФУНКЦИИ ДЛЯ SURICATA И CLAMAV ===
     
@@ -520,9 +495,7 @@ class SecuritySystemLogic:
         try:
             services = {
                 'suricata': 'suricata',
-                'clamav': 'clamav-daemon',
-                'fail2ban': 'fail2ban',
-                'auditd': 'auditd'
+                'clamav': 'clamav-daemon'
             }
             
             if system in services:
@@ -558,7 +531,7 @@ class SecuritySystemLogic:
                     else:
                         return "❌ Не установлена"
                     
-            return "⚠️ Не установлена"
+            return "⚠️ Не поддерживается"
             
         except Exception as e:
             return f"❌ Ошибка проверки: {str(e)}"
@@ -567,7 +540,7 @@ class SecuritySystemLogic:
         """Получить информацию о статусе всех систем"""
         status_info = "=== СТАТУС СИСТЕМ ===\n\n"
         
-        systems = ['suricata', 'clamav', 'fail2ban', 'auditd']
+        systems = ['suricata', 'clamav']
         for system in systems:
             status = self.check_system_status(system)
             status_info += f"{system.upper():<15} {status}\n"
@@ -584,18 +557,6 @@ class SecuritySystemLogic:
             return self.start_suricata()
         elif system == 'clamav':
             return self.start_clamav()
-        elif system == 'fail2ban':
-            try:
-                subprocess.run(['sudo', 'systemctl', 'start', 'fail2ban'], capture_output=True)
-                return f"✅ {system} запущен"
-            except Exception as e:
-                return f"❌ Ошибка запуска {system}: {e}"
-        elif system == 'auditd':
-            try:
-                subprocess.run(['sudo', 'systemctl', 'start', 'auditd'], capture_output=True)
-                return f"✅ {system} запущен"
-            except Exception as e:
-                return f"❌ Ошибка запуска {system}: {e}"
         else:
             return f"❌ Система {system} не поддерживается"
     
@@ -605,17 +566,5 @@ class SecuritySystemLogic:
             return self.stop_suricata()
         elif system == 'clamav':
             return self.stop_clamav()
-        elif system == 'fail2ban':
-            try:
-                subprocess.run(['sudo', 'systemctl', 'stop', 'fail2ban'], capture_output=True)
-                return f"✅ {system} остановлен"
-            except Exception as e:
-                return f"❌ Ошибка остановки {system}: {e}"
-        elif system == 'auditd':
-            try:
-                subprocess.run(['sudo', 'systemctl', 'stop', 'auditd'], capture_output=True)
-                return f"✅ {system} остановлен"
-            except Exception as e:
-                return f"❌ Ошибка остановки {system}: {e}"
         else:
             return f"❌ Система {system} не поддерживается"
