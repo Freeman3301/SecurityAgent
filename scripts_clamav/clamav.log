@@ -1,0 +1,12 @@
+/home/freem/.cache/mozilla/firefox/4hab0bdt.default-release/cache2/entries/51F44E3226960CB9005EF7FB0B5D063696EB4F98: PUA.Win.Exploit.CVE_2012_1461-1 FOUND
+/home/freem/.cache/mozilla/firefox/4hab0bdt.default-release/cache2/entries/E539BFC3DD20CDAC60130B3D4D81963111283788: PUA.Win.Exploit.CVE_2012_1461-1 FOUND
+/home/freem/.cache/mozilla/firefox/4hab0bdt.default-release/cache2/entries/A871699A3E265F22631A08D8C5A81E780ED98255: PUA.Win.Exploit.CVE_2012_1461-1 FOUND
+/home/freem/.cache/mozilla/firefox/4hab0bdt.default-release/cache2/entries/B2F00B574E66A9AFEA87B080844F579B3971E8C6: PUA.Win.Exploit.CVE_2012_1461-1 FOUND
+/home/freem/eicar_test.txt: Eicar-Signature FOUND
+/home/freem/CURSACH/FilesCUR/SystemsSecurity/suricata/src/suricata-7.0.10/rust/vendor/flate2/tests/multi.gz: PUA.Win.Exploit.CVE_2012_1461-1 FOUND
+/home/freem/CURSACH/FilesCUR/SystemsSecurity/suricata/src/suricata-7.0.10/suricata-update/tests/emerging.rules.zip: PUA.Html.Trojan.Crypt-355 FOUND
+/home/freem/CURSACH/FilesCUR/SystemsSecurity/suricata/src/suricata-7.0.10/suricata-update/tests/emerging.rules.tar.gz: PUA.Html.Trojan.Crypt-355 FOUND
+/home/freem/CURSACH/FilesCUR/SystemsSecurity/suricata/src/suricata-7.0.10/libhtp/test/files/gztest-10-multipart.gz: PUA.Win.Exploit.CVE_2012_1461-1 FOUND
+/home/freem/CURSACH/FilesCUR/SystemsSecurity/suricata/suricata-7.0.10.tar.gz: PUA.Html.Trojan.Crypt-355 FOUND
+/home/freem/.local/share/radare2/r2pm/git/r2ghidra/test/bins/mz/unzip.exe: PUA.Win.Packer.Exepack-1 FOUND
+/home/freem/.local/share/radare2/r2pm/git/r2ghidra-sleigh/test/bins/mz/unzip.exe: PUA.Win.Packer.Exepack-1 FOUND

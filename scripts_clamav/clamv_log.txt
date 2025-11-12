@@ -1,0 +1,260 @@
+=== FULL CLAMAV SCAN STARTED ===
+Start time: Пт 17 окт 2025 12:04:27 MSK
+Log file: /var/log/clamav/full_scan_20251017_120427.log
+=== SERVICE STATUS ===
+=== DATABASE UPDATE ===
+ClamAV update process started at Fri Oct 17 12:04:27 2025
+WARNING: DNS Update Info disabled. Falling back to HTTP mode.
+Trying to retrieve CVD header from https://clamav-mirror.ru//daily.cld
+WARNING: remote_cvdhead: file not found: https://clamav-mirror.ru//daily.cld
+* Host clamav-mirror.ru:443 was resolved.
+* IPv6: (none)
+* IPv4: 94.247.111.11
+*   Trying 94.247.111.11:443...
+* ALPN: curl offers h2,http/1.1
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: none
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / x25519 / id-ecPublicKey
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=clamav-mirror.ru
+*  start date: Oct 10 18:28:33 2025 GMT
+*  expire date: Jan  8 18:28:32 2026 GMT
+*  subjectAltName: host "clamav-mirror.ru" matched cert's "clamav-mirror.ru"
+*  issuer: C=US; O=Let's Encrypt; CN=E7
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (4096/152 Bits/secBits), signed using sha256WithRSAEncryption
+* Established connection to clamav-mirror.ru (94.247.111.11 port 443) from 192.168.0.162 port 37378 
+* using HTTP/1.x
+> GET //daily.cld HTTP/1.1
+Host: clamav-mirror.ru
+Range: bytes=0-511
+User-Agent: ClamAV/1.4.3 (OS: Linux, ARCH: x86_64, CPU: x86_64, UUID: 8dbbe095-eb00-40af-b242-ed40dd14073c)
+Accept: */*
+If-Modified-Since: Thu, 16 Oct 2025 09:30:03 GMT
+Connection: close
+
+* Request completely sent off
+< HTTP/1.1 404 Not Found
+< Server: nginx/1.22.1
+< Date: Fri, 17 Oct 2025 09:04:30 GMT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 153
+< Connection: close
+< 
+* shutting down connection #0
+Trying to retrieve CVD header from https://clamav-mirror.ru//daily.cvd
+* Host clamav-mirror.ru:443 was resolved.
+* IPv6: (none)
+* IPv4: 94.247.111.11
+*   Trying 94.247.111.11:443...
+* ALPN: curl offers h2,http/1.1
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: none
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / x25519 / id-ecPublicKey
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=clamav-mirror.ru
+*  start date: Oct 10 18:28:33 2025 GMT
+*  expire date: Jan  8 18:28:32 2026 GMT
+*  subjectAltName: host "clamav-mirror.ru" matched cert's "clamav-mirror.ru"
+*  issuer: C=US; O=Let's Encrypt; CN=E7
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (4096/152 Bits/secBits), signed using sha256WithRSAEncryption
+* Established connection to clamav-mirror.ru (94.247.111.11 port 443) from 192.168.0.162 port 37386 
+* using HTTP/1.x
+> GET //daily.cvd HTTP/1.1
+Host: clamav-mirror.ru
+Range: bytes=0-511
+User-Agent: ClamAV/1.4.3 (OS: Linux, ARCH: x86_64, CPU: x86_64, UUID: 8dbbe095-eb00-40af-b242-ed40dd14073c)
+Accept: */*
+If-Modified-Since: Thu, 16 Oct 2025 09:30:03 GMT
+Connection: close
+
+* Request completely sent off
+< HTTP/1.1 206 Partial Content
+< Server: nginx/1.22.1
+< Date: Fri, 17 Oct 2025 09:04:30 GMT
+< Content-Type: application/octet-stream
+< Content-Length: 512
+< Last-Modified: Thu, 16 Oct 2025 09:30:00 GMT
+< Connection: close
+< ETag: "68f0bb18-3dbc2a6"
+< Content-Range: bytes 0-511/64733862
+< 
+* shutting down connection #0
+OK
+daily.cvd database is up-to-date (version: 27794, sigs: 2076970, f-level: 90, builder: svc.clamav-publisher)
+Trying to retrieve CVD header from https://clamav-mirror.ru//main.cld
+WARNING: remote_cvdhead: file not found: https://clamav-mirror.ru//main.cld
+* Host clamav-mirror.ru:443 was resolved.
+* IPv6: (none)
+* IPv4: 94.247.111.11
+*   Trying 94.247.111.11:443...
+* ALPN: curl offers h2,http/1.1
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: none
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / x25519 / id-ecPublicKey
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=clamav-mirror.ru
+*  start date: Oct 10 18:28:33 2025 GMT
+*  expire date: Jan  8 18:28:32 2026 GMT
+*  subjectAltName: host "clamav-mirror.ru" matched cert's "clamav-mirror.ru"
+*  issuer: C=US; O=Let's Encrypt; CN=E7
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (4096/152 Bits/secBits), signed using sha256WithRSAEncryption
+* Established connection to clamav-mirror.ru (94.247.111.11 port 443) from 192.168.0.162 port 37398 
+* using HTTP/1.x
+> GET //main.cld HTTP/1.1
+Host: clamav-mirror.ru
+Range: bytes=0-511
+User-Agent: ClamAV/1.4.3 (OS: Linux, ARCH: x86_64, CPU: x86_64, UUID: 8dbbe095-eb00-40af-b242-ed40dd14073c)
+Accept: */*
+If-Modified-Since: Thu, 16 Sep 2021 12:32:42 GMT
+Connection: close
+
+* Request completely sent off
+< HTTP/1.1 404 Not Found
+< Server: nginx/1.22.1
+< Date: Fri, 17 Oct 2025 09:04:31 GMT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 153
+< Connection: close
+< 
+* shutting down connection #0
+Trying to retrieve CVD header from https://clamav-mirror.ru//main.cvd
+* Host clamav-mirror.ru:443 was resolved.
+* IPv6: (none)
+* IPv4: 94.247.111.11
+*   Trying 94.247.111.11:443...
+* ALPN: curl offers h2,http/1.1
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: none
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / x25519 / id-ecPublicKey
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=clamav-mirror.ru
+*  start date: Oct 10 18:28:33 2025 GMT
+*  expire date: Jan  8 18:28:32 2026 GMT
+*  subjectAltName: host "clamav-mirror.ru" matched cert's "clamav-mirror.ru"
+*  issuer: C=US; O=Let's Encrypt; CN=E7
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (4096/152 Bits/secBits), signed using sha256WithRSAEncryption
+* Established connection to clamav-mirror.ru (94.247.111.11 port 443) from 192.168.0.162 port 37400 
+* using HTTP/1.x
+> GET //main.cvd HTTP/1.1
+Host: clamav-mirror.ru
+Range: bytes=0-511
+User-Agent: ClamAV/1.4.3 (OS: Linux, ARCH: x86_64, CPU: x86_64, UUID: 8dbbe095-eb00-40af-b242-ed40dd14073c)
+Accept: */*
+If-Modified-Since: Thu, 16 Sep 2021 12:32:42 GMT
+Connection: close
+
+* Request completely sent off
+< HTTP/1.1 206 Partial Content
+< Server: nginx/1.22.1
+< Date: Fri, 17 Oct 2025 09:04:31 GMT
+< Content-Type: application/octet-stream
+< Content-Length: 512
+< Last-Modified: Thu, 16 Sep 2021 12:32:00 GMT
+< Connection: close
+< ETag: "61433940-a2950ad"
+< Content-Range: bytes 0-511/170479789
+< 
+* shutting down connection #0
+OK
+main.cvd database is up-to-date (version: 62, sigs: 6647427, f-level: 90, builder: sigmgr)
+Trying to retrieve CVD header from https://clamav-mirror.ru//bytecode.cld
+WARNING: remote_cvdhead: file not found: https://clamav-mirror.ru//bytecode.cld
+* Host clamav-mirror.ru:443 was resolved.
+* IPv6: (none)
+* IPv4: 94.247.111.11
+*   Trying 94.247.111.11:443...
+* ALPN: curl offers h2,http/1.1
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: none
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / x25519 / id-ecPublicKey
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=clamav-mirror.ru
+*  start date: Oct 10 18:28:33 2025 GMT
+*  expire date: Jan  8 18:28:32 2026 GMT
+*  subjectAltName: host "clamav-mirror.ru" matched cert's "clamav-mirror.ru"
+*  issuer: C=US; O=Let's Encrypt; CN=E7
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (4096/152 Bits/secBits), signed using sha256WithRSAEncryption
+* Established connection to clamav-mirror.ru (94.247.111.11 port 443) from 192.168.0.162 port 37410 
+* using HTTP/1.x
+> GET //bytecode.cld HTTP/1.1
+Host: clamav-mirror.ru
+Range: bytes=0-511
+User-Agent: ClamAV/1.4.3 (OS: Linux, ARCH: x86_64, CPU: x86_64, UUID: 8dbbe095-eb00-40af-b242-ed40dd14073c)
+Accept: */*
+If-Modified-Since: Thu, 11 Sep 2025 12:29:19 GMT
+Connection: close
+
+* Request completely sent off
+< HTTP/1.1 404 Not Found
+< Server: nginx/1.22.1
+< Date: Fri, 17 Oct 2025 09:04:31 GMT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 153
+< Connection: close
+< 
+* shutting down connection #0
+Trying to retrieve CVD header from https://clamav-mirror.ru//bytecode.cvd
+* Host clamav-mirror.ru:443 was resolved.
+* IPv6: (none)
+* IPv4: 94.247.111.11
+*   Trying 94.247.111.11:443...
+* ALPN: curl offers h2,http/1.1
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: none
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / x25519 / id-ecPublicKey
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=clamav-mirror.ru
+*  start date: Oct 10 18:28:33 2025 GMT
+*  expire date: Jan  8 18:28:32 2026 GMT
+*  subjectAltName: host "clamav-mirror.ru" matched cert's "clamav-mirror.ru"
+*  issuer: C=US; O=Let's Encrypt; CN=E7
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (4096/152 Bits/secBits), signed using sha256WithRSAEncryption
+* Established connection to clamav-mirror.ru (94.247.111.11 port 443) from 192.168.0.162 port 37412 
+* using HTTP/1.x
+> GET //bytecode.cvd HTTP/1.1
+Host: clamav-mirror.ru
+Range: bytes=0-511
+User-Agent: ClamAV/1.4.3 (OS: Linux, ARCH: x86_64, CPU: x86_64, UUID: 8dbbe095-eb00-40af-b242-ed40dd14073c)
+Accept: */*
+If-Modified-Since: Thu, 11 Sep 2025 12:29:19 GMT
+Connection: close
+
+* Request completely sent off
+< HTTP/1.1 206 Partial Content
+< Server: nginx/1.22.1
+< Date: Fri, 17 Oct 2025 09:04:31 GMT
+< Content-Type: application/octet-stream
+< Content-Length: 512
+< Last-Modified: Thu, 11 Sep 2025 12:29:00 GMT
+< Connection: close
+< ETag: "68c2c08c-44c66"
+< Content-Range: bytes 0-511/281702
+< 
+* shutting down connection #0
+OK
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+=== FULL SYSTEM SCAN ===
